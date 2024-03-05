@@ -7,14 +7,20 @@ find_package(glm CONFIG REQUIRED)
 find_package(glog CONFIG REQUIRED)
 
 find_package(portaudio REQUIRED)
+find_package(SndFile REQUIRED)
+
 
 add_executable(stc_rnd psevdo_random.cpp)
 
 target_link_libraries(stc_rnd PRIVATE glog::glog)
 target_link_libraries(stc_rnd PRIVATE glm::glm)
 
+add_executable(stc_gen_sig_itd generate_signals_ITD.cpp)
+target_link_libraries(stc_gen_sig_itd PRIVATE glog::glog)
+target_link_libraries(stc_gen_sig_itd PRIVATE glm::glm)
+target_link_libraries(stc_gen_sig_itd PRIVATE portaudio)
 
-add_executable(stc_generate_signals generate_signals.cpp)
-target_link_libraries(stc_generate_signals PRIVATE glog::glog)
-target_link_libraries(stc_generate_signals PRIVATE glm::glm)
-target_link_libraries(stc_generate_signals PRIVATE portaudio)
+add_executable(stc_gen_sig_k generate_signal_karplus.cpp)
+target_link_libraries(stc_gen_sig_k PRIVATE SndFile::sndfile)
+target_link_libraries(stc_gen_sig_k PRIVATE portaudio)
+target_link_libraries(stc_gen_sig_k PRIVATE glog::glog)

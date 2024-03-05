@@ -7,6 +7,7 @@
 #include <cmath>
 #include <portaudio.h>
 
+
 // Константы
 const double PI = 3.14159265358979323846;
 const double SPEED_OF_SOUND = 340.29; // скорость звука, м/с

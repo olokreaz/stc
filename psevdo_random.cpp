@@ -3,10 +3,8 @@
 #include <cassert>
 #include <cstdint>
 #include <ranges>
+#include <string>
 #include <vector>
-
-#include <glog/logging.h>
-#include <glog/stl_logging.h>
 
 #include <glm/glm.hpp>
 
@@ -33,10 +31,6 @@ glm::u32 next_lcg_( glm::u32 prev = 0 )
 int main( int argc, char **argv )
 {
 
-//	FLAGS_colorlogtostdout = true;
-//	FLAGS_logtostdout      = true;
-
-	google::InitGoogleLogging( *argv );
 
 	glm::uvec4 vec;
 

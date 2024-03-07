@@ -2,8 +2,6 @@
 // Created by olokreZ on 03.03.2024.
 //
 
-#include <glog/stl_logging.h>
-#include <glog/logging.h>
 #include <vector>
 #include <random>
 #include <portaudio.h>

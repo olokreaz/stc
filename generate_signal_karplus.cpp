@@ -7,7 +7,8 @@
 #include <portaudio.h>
 #include <sndfile.h>
 #include <args.hxx>
-
+#include <glog/logging.h>
+#include <glog/stl_logging.h>
 
 // Коэффициент затухания
 #define DAMPING_FACTOR 0.996

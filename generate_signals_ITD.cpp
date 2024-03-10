@@ -1,12 +1,8 @@
 //
 // Created by olokreZ on 02.03.2024.
 //
-
-#include <windows.h>
-
 #include <glm/glm.hpp>
 #include <glm/gtc/constants.hpp>
-
 
 // Функция для вычисления интерауральной временной разницы (ITD) в зависимости от угла и скорости звука
 #include <portaudio.h>
